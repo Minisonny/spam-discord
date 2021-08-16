@@ -44,7 +44,7 @@ chrome.setDefaultService(new chrome.ServiceBuilder(PATH_TO_WEB_DRIVER).build());
       for (const [title, lines] of lyrics) {
         await typeTextAndRemoveErrorPopUp(driver, title.toUpperCase());
         for (const line of lines) {
-          await typeTextAndRemoveErrorPopUp(line, title.toUpperCase());
+          await typeTextAndRemoveErrorPopUp(driver, line);
         }
       }
     }
